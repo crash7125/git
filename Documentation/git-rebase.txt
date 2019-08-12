@@ -388,6 +388,7 @@ See also INCOMPATIBLE OPTIONS below.
 	as the committer date. This implies --force-rebase.
 
 --ignore-date::
+--author-date-is-committer-date::
 	Instead of using the given author date, re-set it to the value
 	same as committer (current) date. This implies --force-rebase.
 +
