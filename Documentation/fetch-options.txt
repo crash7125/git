@@ -160,10 +160,20 @@ ifndef::git-pull[]
 
 -j::
 --jobs=<n>::
+	Number of parallel children to be used for all forms of fetching.
+	This is the same as passing `--submodule-fetch-jobs=<n>` and
+	`--fetch-jobs=<n>`.
+
+--submodule-fetch-jobs=<n>::
 	Number of parallel children to be used for fetching submodules.
 	Each will fetch from different submodules, such that fetching many
 	submodules will be faster. By default submodules will be fetched
 	one at a time.
+
+--fetch-jobs=<n>::
+	Number of parallel children to be used for fetching.  Each will fetch
+	from different remotes, such that fetching from many remotes will be
+	faster.  By default remotes will be fetched from one at a time.
 
 --no-recurse-submodules::
 	Disable recursive fetching of submodules (this has the same effect as
