@@ -306,8 +306,8 @@ test_expect_success 'rebase --am and .gitattributes' '
 	(
 		cd attributes &&
 		test_commit init &&
-		test_config filter.test.clean "sed -e '\''s/smudged/clean/g'\''" &&
-		test_config filter.test.smudge "sed -e '\''s/clean/smudged/g'\''" &&
+		git config filter.test.clean "sed -e '\''s/smudged/clean/g'\''" &&
+		git config filter.test.smudge "sed -e '\''s/clean/smudged/g'\''" &&
 
 		test_commit second &&
 		git checkout -b test HEAD^ &&
